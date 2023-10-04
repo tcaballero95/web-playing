@@ -1,0 +1,18 @@
+.body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.box {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.img-test {
+    display: inline;
+    width: 30%;
+    height: auto;
+    margin-inline: 2%;
+    margin-block: 2%;
+    border-radius: 5%;
+}
