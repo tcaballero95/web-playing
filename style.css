@@ -6,13 +6,18 @@
 .box {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
+    border: 0.2rem solid rgb(202, 185, 30);
+    margin-left: 5%;
+    margin-right: 5%; 
 }
 
 .img-test {
     display: inline;
-    width: 30%;
+    width: 25%;
     height: auto;
-    margin-inline: 2%;
-    margin-block: 2%;
     border-radius: 5%;
+    margin-block: 1%;
+    margin-inline: 1%;
+    border: 0.2rem solid rgb(34, 177, 177) ;
 }
