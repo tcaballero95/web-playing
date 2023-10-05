@@ -1,6 +1,7 @@
 .body {
     height: 100vh;
     width: 100vw;
+    overflow-x: hidden;
 }
 
 .box {
@@ -8,8 +9,17 @@
     flex-flow: row wrap;
     justify-content: center;
     border: 0.2rem solid rgb(202, 185, 30);
-    margin-left: 5%;
-    margin-right: 5%; 
+    margin-inline: 5%; 
+    margin-block: 5px;
+}
+
+.box-center {
+    display: flex;
+    border: 0.2rem solid rgb(202, 185, 30);
+    margin-inline: 5%; 
+    margin-block: 5px;
+    width: min-content;
+    overflow-x: scroll;
 }
 
 .img-test {
@@ -20,4 +30,12 @@
     margin-block: 1%;
     margin-inline: 1%;
     border: 0.2rem solid rgb(34, 177, 177) ;
+}
+
+.box-overflow {
+    display: block;
+    border: 0.2rem solid rgb(50, 56, 145);
+    margin-inline: 5%; 
+    margin-block: 5px;
+    overflow-x: scroll;
 }
