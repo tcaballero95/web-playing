@@ -1,41 +1,49 @@
-.body {
-    height: 100vh;
-    width: 100vw;
-    overflow-x: hidden;
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,300;0,400;0,800;1,400&family=Montserrat:wght@400;700&display=swap");
+
+body,
+html {
+  background: rgb(255, 246, 91);
+  background: linear-gradient(
+    30deg,
+    rgba(255, 246, 91, 1) 0%,
+    rgba(255, 133, 76, 1) 30%,
+    rgb(240, 105, 71) 100%
+  );
+  font-family: "Kanit", sans-serif;
 }
 
-.box {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    border: 0.2rem solid rgb(202, 185, 30);
-    margin-inline: 5%; 
-    margin-block: 5px;
+body {
+  min-height: 100vh;
 }
 
-.box-center {
-    display: flex;
-    border: 0.2rem solid rgb(202, 185, 30);
-    margin-inline: 5%; 
-    margin-block: 5px;
-    width: min-content;
-    overflow-x: scroll;
+.tab-content > .tab-pane {
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
 }
 
-.img-test {
-    display: inline;
-    width: 25%;
-    height: auto;
-    border-radius: 5%;
-    margin-block: 1%;
-    margin-inline: 1%;
-    border: 0.2rem solid rgb(34, 177, 177) ;
+.tab-content > .tab-pane p {
+  text-align: justify;
+  text-justify: inter-word;
 }
 
-.box-overflow {
-    display: block;
-    border: 0.2rem solid rgb(50, 56, 145);
-    margin-inline: 5%; 
-    margin-block: 5px;
-    overflow-x: scroll;
+.nav-tabs {
+  --bs-nav-tabs-border-color: black;
+  --bs-nav-tabs-border-width: 2px;
+  --bs-nav-tabs-link-hover-border-color: transparent;
+  --bs-nav-tabs-link-active-color: #fff;
+  --bs-nav-tabs-link-active-bg: black;
+  --bs-nav-tabs-link-active-border-color: black;
+}
+
+.nav-link {
+  color: black;
+}
+
+.nav {
+  --bs-nav-link-color: #ffffff;
+  --bs-nav-link-hover-color: #ffffff;
+}
+
+.tab-image {
+  display: flex;
 }
