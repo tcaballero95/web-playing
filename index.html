@@ -15,7 +15,7 @@
 
   <body>
     <div class="container my-3">
-      <h1>Tab with Radio Buttons</h1>
+      <h1>WRF Maps</h1>
     </div>
 
     <div class="container">
@@ -24,57 +24,71 @@
         <li class="nav-item" role="presentation">
           <button
             class="nav-link active"
-            id="home-tab"
+            id="tmax-tab"
             data-bs-toggle="tab"
-            data-bs-target="#home"
+            data-bs-target="#tmax"
             type="button"
             role="tab"
-            aria-controls="home"
+            aria-controls="tmax"
             aria-selected="true"
           >
-            Home
+            Temperatura Máxima
           </button>
         </li>
         <li class="nav-item" role="presentation">
           <button
             class="nav-link"
-            id="profile-tab"
+            id="tmin-tab"
             data-bs-toggle="tab"
-            data-bs-target="#profile"
+            data-bs-target="#tmin"
             type="button"
             role="tab"
-            aria-controls="profile"
+            aria-controls="tmin"
             aria-selected="false"
           >
-            Profile
+            Temperatura Mínima
           </button>
         </li>
         <li class="nav-item" role="presentation">
           <button
             class="nav-link"
-            id="messages-tab"
+            id="precipitacion-tab"
             data-bs-toggle="tab"
-            data-bs-target="#messages"
+            data-bs-target="#precipitacion"
             type="button"
             role="tab"
-            aria-controls="messages"
+            aria-controls="precipitacion"
             aria-selected="false"
           >
-            Messages
+            Precipitación
           </button>
         </li>
         <li class="nav-item" role="presentation">
           <button
             class="nav-link"
-            id="settings-tab"
+            id="viento-tab"
             data-bs-toggle="tab"
-            data-bs-target="#settings"
+            data-bs-target="#viento"
             type="button"
             role="tab"
-            aria-controls="settings"
+            aria-controls="viento"
             aria-selected="false"
           >
-            Settings
+            Viento
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="viento-gif-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#viento-gif"
+            type="button"
+            role="tab"
+            aria-controls="viento-gif"
+            aria-selected="false"
+          >
+            Viento (GIF)
           </button>
         </li>
       </ul>
@@ -83,67 +97,402 @@
       <div class="tab-content">
         <div
           class="tab-pane active"
-          id="home"
+          id="tmax"
           role="tabpanel"
-          aria-labelledby="home-tab"
+          aria-labelledby="tmax-tab"
           tabindex="0"
         >
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <img
-            class="tab-image"
-            src="https://picsum.photos/id/350/200/300"
-            alt=""
-          />
+          <div
+            id="carousel-tmax"
+            class="carousel slide carousel-fade carousel-dark"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./figures/Tmax/CURRENT_0.png" class="carousel-img" />
+              </div>
+              <div class="carousel-item">
+                <img src="./figures/Tmax/CURRENT_1.png" class="carousel-img" />
+              </div>
+              <div class="carousel-item">
+                <img src="./figures/Tmax/CURRENT_2.png" class="carousel-img" />
+              </div>
+              <div class="carousel-item">
+                <img src="./figures/Tmax/CURRENT_3.png" class="carousel-img" />
+              </div>
+              <div class="carousel-item">
+                <img src="./figures/Tmax/CURRENT_4.png" class="carousel-img" />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carousel-tmax"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carousel-tmax"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         </div>
         <div
           class="tab-pane"
-          id="profile"
+          id="tmin"
           role="tabpanel"
-          aria-labelledby="profile-tab"
+          aria-labelledby="tmin-tab"
           tabindex="0"
         >
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit quos
-            saepe alias voluptate architecto nemo sit, optio blanditiis non quae
-            quis minima placeat ratione cupiditate quibusdam error nisi autem
-            recusandae cum quidem debitis quisquam repellat.
-          </p>
-          <img
-            class="tab-image"
-            src="https://picsum.photos/id/237/200/300"
-            alt=""
-          />
+          <div
+            id="carousel-tmin"
+            class="carousel slide carousel-fade carousel-dark"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./figures/Tmin/CURRENT_0.png" class="carousel-img" />
+              </div>
+              <div class="carousel-item">
+                <img src="./figures/Tmin/CURRENT_1.png" class="carousel-img" />
+              </div>
+              <div class="carousel-item">
+                <img src="./figures/Tmin/CURRENT_2.png" class="carousel-img" />
+              </div>
+              <div class="carousel-item">
+                <img src="./figures/Tmin/CURRENT_3.png" class="carousel-img" />
+              </div>
+              <div class="carousel-item">
+                <img src="./figures/Tmin/CURRENT_4.png" class="carousel-img" />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carousel-tmin"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carousel-tmin"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         </div>
         <div
           class="tab-pane"
-          id="messages"
+          id="precipitacion"
           role="tabpanel"
-          aria-labelledby="messages-tab"
+          aria-labelledby="precipitacion-tab"
           tabindex="0"
         >
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-          <img
-            class="tab-image"
-            src="https://picsum.photos/id/27/200/300"
-            alt=""
-          />
+          <div
+            id="carousel-precipitacion"
+            class="carousel slide carousel-fade carousel-dark"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="./figures/Precipitacion/CURRENT_0.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Precipitacion/CURRENT_1.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Precipitacion/CURRENT_2.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Precipitacion/CURRENT_3.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Precipitacion/CURRENT_4.png"
+                  class="carousel-img"
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carousel-precipitacion"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carousel-precipitacion"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         </div>
         <div
           class="tab-pane"
-          id="settings"
+          id="viento"
           role="tabpanel"
-          aria-labelledby="settings-tab"
+          aria-labelledby="viento-tab"
           tabindex="0"
         >
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-            aliquid adipisci consequuntur itaque maiores ea ipsa iste.
-          </p>
-          <img
-            class="tab-image"
-            src="https://picsum.photos/id/117/200/300"
-            alt=""
-          />
+          <div
+            id="carousel-viento"
+            class="carousel slide carousel-fade carousel-dark"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="./figures/Viento/CURRENT_00.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Viento/CURRENT_01.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Viento/CURRENT_02.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Viento/CURRENT_03.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Viento/CURRENT_04.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Viento/CURRENT_05.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Viento/CURRENT_06.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Viento/CURRENT_07.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Viento/CURRENT_08.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Viento/CURRENT_09.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Viento/CURRENT_10.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Viento/CURRENT_11.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Viento/CURRENT_12.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Viento/CURRENT_14.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Viento/CURRENT_15.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Viento/CURRENT_16.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Viento/CURRENT_17.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Viento/CURRENT_18.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Viento/CURRENT_19.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Viento/CURRENT_20.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Viento/CURRENT_21.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Viento/CURRENT_22.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Viento/CURRENT_23.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Viento/CURRENT_24.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Viento/CURRENT_25.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Viento/CURRENT_26.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Viento/CURRENT_27.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Viento/CURRENT_28.png"
+                  class="carousel-img"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./figures/Viento/CURRENT_29.png"
+                  class="carousel-img"
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carousel-viento"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carousel-viento"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div
+          class="tab-pane"
+          id="viento-gif"
+          role="tabpanel"
+          aria-labelledby="viento-gif-tab"
+          tabindex="0"
+        >
+          <img src="./figures/viento.gif" class="carousel-img" />
         </div>
       </div>
     </div>

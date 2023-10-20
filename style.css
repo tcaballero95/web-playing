@@ -2,13 +2,13 @@
 
 body,
 html {
-  background: rgb(255, 246, 91);
+  /* background: rgb(255, 246, 91);
   background: linear-gradient(
     30deg,
     rgba(255, 246, 91, 1) 0%,
     rgba(255, 133, 76, 1) 30%,
     rgb(240, 105, 71) 100%
-  );
+  ); */
   font-family: "Kanit", sans-serif;
 }
 
@@ -28,9 +28,9 @@ body {
 
 .nav-tabs {
   --bs-nav-tabs-border-color: black;
-  --bs-nav-tabs-border-width: 2px;
-  --bs-nav-tabs-link-hover-border-color: transparent;
-  --bs-nav-tabs-link-active-color: #fff;
+  --bs-nav-tabs-border-width: 1px;
+  --bs-nav-tabs-link-hover-border-color: black;
+  --bs-nav-tabs-link-active-color: #ffffff;
   --bs-nav-tabs-link-active-bg: black;
   --bs-nav-tabs-link-active-border-color: black;
 }
@@ -41,9 +41,21 @@ body {
 
 .nav {
   --bs-nav-link-color: #ffffff;
-  --bs-nav-link-hover-color: #ffffff;
+  --bs-nav-link-hover-color: black;
 }
 
-.tab-image {
-  display: flex;
+.tab-content {
+  background-color: white;
+}
+
+.carousel-img {
+  display: block;
+  width: 550px;
+  margin-inline: auto;
+}
+
+@media (max-width: 768px) {
+  .carousel-img {
+    width: 300px;
+  }
 }
